@@ -1,0 +1,39 @@
+a:
+  b:
+    c: d
+    e: true
+    f: 1234
+    g: 1234.5
+    h:
+      - i
+      - j
+      - k
+    l:
+      - 1
+      - 2
+      - 3
+    m:
+      - 1.2
+      - 3.4
+    n:
+      - true
+      - true
+      - false
+    o:
+      p:
+        q: r
+        s: 1234
+      u: true
+    v:
+      w: 1234
+    x:
+      y: 1234.5
+    z:
+      a: true
+    b:
+      c: d
+g: h
+i:
+  j: k
+  l: false
+  m: 1234
