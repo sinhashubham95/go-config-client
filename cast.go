@@ -2,10 +2,11 @@ package configs
 
 import (
 	"fmt"
+	"reflect"
+
 	jsoniter "github.com/json-iterator/go"
 	"github.com/mitchellh/mapstructure"
 	"github.com/spf13/cast"
-	"reflect"
 )
 
 func unmarshal(i interface{}, o interface{}) error {
