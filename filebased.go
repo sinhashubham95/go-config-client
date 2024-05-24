@@ -325,7 +325,7 @@ func (f *fileBasedClient) Get(config, key string) (interface{}, error) {
 		k.mu.RLock()
 		defer k.mu.RUnlock()
 		if key == "" {
-			return k.All(), nil
+			return k.Raw(), nil
 		}
 		d := k.Get(key)
 		if d == nil {
