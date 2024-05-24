@@ -6,8 +6,14 @@ import (
 )
 
 type decoded struct {
-	A string `json:"a"`
-	B string `json:"b"`
+	A string  `mapstructure:"a"`
+	C int     `mapstructure:"c"`
+	D float64 `mapstructure:"d"`
+	E bool    `mapstructure:"e"`
+	F struct {
+		A string `mapstructure:"a"`
+		B string `mapstructure:"b"`
+	} `mapstructure:"f"`
 }
 
 func main() {
@@ -30,5 +36,5 @@ func main() {
 	fmt.Println(client.GetBoolD("configs", "e", false))
 
 	d := decoded{}
-	fmt.Println(client.Unmarshal("configs", "f", &d), d)
+	fmt.Println(client.Unmarshal("configs", "", &d), d)
 }
